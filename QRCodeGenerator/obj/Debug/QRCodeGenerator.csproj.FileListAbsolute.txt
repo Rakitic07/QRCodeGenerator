@@ -1,0 +1,9 @@
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\bin\Debug\QRCodeGenerator.exe
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\bin\Debug\QRCodeGenerator.pdb
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.csprojAssemblyReference.cache
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.Form1.resources
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.Properties.Resources.resources
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.csproj.GenerateResource.cache
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.exe
+C:\Users\RaktimBiswas\source\repos\QRCodeGenerator\QRCodeGenerator\obj\Debug\QRCodeGenerator.pdb
