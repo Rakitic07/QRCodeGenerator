@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace QRCGenerator
 {
@@ -15,14 +16,6 @@ namespace QRCGenerator
         }
 
         Random rdm = new Random();
-        private void PBox2_Paint(object sender, PaintEventArgs e)
-        {
-            //pBox2.BackColor = Color.White;            
-            using (Font myFont = new Font("Comic Sans MS", 11, FontStyle.Italic))
-            {
-                e.Graphics.DrawString("Your Logo\nhas been\nSet", myFont, Brushes.SlateGray, new Point(1, 4));
-            }
-        }
 
         private void BunifuFlatButton1_Click(object sender, EventArgs e)
         {
@@ -36,9 +29,12 @@ namespace QRCGenerator
 
         private async void GenerateQRBtn_Click(object sender, EventArgs e)
         {
+            var qrsize=12;
+            var logosize = 20;
             circleProgress.Value = 0;
             OpenFileDialog of = new OpenFileDialog();
             of.Filter = "PNG/JPEG/ICON Files (*.png,*.jpg,*.ico)|*.png;*.jpg;*.ico";
+            var showdiag = 0;
             if (of.ShowDialog() == DialogResult.OK)
             {
                 //pBox2.ImageLocation = of.FileName;
@@ -47,6 +43,7 @@ namespace QRCGenerator
                 pBox.Image = null;
                 await Task.Delay(30);
                 circleProgress.BringToFront();
+                showdiag++;
             }
 
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -63,7 +60,11 @@ namespace QRCGenerator
             circleProgress.SendToBack();
             await Task.Delay(30);
 
-            pBox.Image = qrCode.GetGraphic(12, Color.Black, Color.White, (Bitmap)Bitmap.FromFile(of.FileName), 15, 5, false);
+            //Bypass the DialogResult check if cancelled.
+            if (showdiag > 0)
+                if(QRText.Text.Length > 60)
+                    pBox.Image = qrCode.GetGraphic((qrsize-(QRText.Text.Length - 60))==0?qrsize:qrsize--, Color.Black, Color.White, (Bitmap)Bitmap.FromFile(of.FileName),logosize+(QRText.Text.Length - 60), 5, false);
+
         }
 
         private void QRText_Enter(object sender, EventArgs e)
