@@ -8,7 +8,7 @@
 
 # Running the Application
 
-+ Clone the Repository `git clone https://github.com/Rakitic07/QRCodeGenerator.git`.
-+ Change Directory `cd QRCodeGenerator/bin/Debug/`.
++ Clone the Repository `git clone https://github.com/Rakitic07/QRCodeGenerator.git`
++ Change the Directory `cd QRCodeGenerator/bin/Debug/`
 + Run the `QRCGenerator.exe` file.
 
