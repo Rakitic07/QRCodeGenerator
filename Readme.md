@@ -3,7 +3,7 @@
 ![](https://github.com/Rakitic07/QRCodeGenerator/blob/master/QR.gif)
 
 
-# [![made-with-csharp](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+# [![made-with-csharp](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 # [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 # Running the Application
