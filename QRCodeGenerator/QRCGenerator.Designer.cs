@@ -43,6 +43,7 @@
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.DragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.DragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -155,6 +156,7 @@
             this.SaveQR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SaveQR.Textcolor = System.Drawing.Color.White;
             this.SaveQR.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveQR.Click += new System.EventHandler(this.SaveQR_Click);
             // 
             // QRText
             // 
@@ -179,6 +181,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(190)))));
+            this.panel2.Controls.Add(this.bunifuCustomLabel1);
             this.panel2.Controls.Add(this.bunifuFlatButton2);
             this.panel2.Controls.Add(this.bunifuFlatButton1);
             this.panel2.Location = new System.Drawing.Point(0, 6);
@@ -279,6 +282,17 @@
             this.DragControl3.TargetControl = this.pBox;
             this.DragControl3.Vertical = true;
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.Window;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(19, 17);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(124, 23);
+            this.bunifuCustomLabel1.TabIndex = 10;
+            this.bunifuCustomLabel1.Text = "QRC Generator";
+            // 
             // QRCGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +307,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBox)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -311,6 +326,7 @@
         private Bunifu.Framework.UI.BunifuTileButton GenerateQRBtn;
         private System.Windows.Forms.PictureBox pBox;
         private Bunifu.Framework.UI.BunifuDragControl DragControl3;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
 

@@ -1,9 +1,11 @@
 ﻿using QRCoder;
 using System;
+using System.IO;
+using System.Linq;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace QRCGenerator
 {
@@ -29,7 +31,7 @@ namespace QRCGenerator
 
         private async void GenerateQRBtn_Click(object sender, EventArgs e)
         {
-            var qrsize=12;
+            var qrsize = 12;
             var logosize = 20;
             circleProgress.Value = 0;
             OpenFileDialog of = new OpenFileDialog();
@@ -62,8 +64,9 @@ namespace QRCGenerator
 
             //Bypass the DialogResult check if cancelled.
             if (showdiag > 0)
-                if(QRText.Text.Length > 60)
-                    pBox.Image = qrCode.GetGraphic((qrsize-(QRText.Text.Length - 60))==0?qrsize:qrsize--, Color.Black, Color.White, (Bitmap)Bitmap.FromFile(of.FileName),logosize+(QRText.Text.Length - 60), 5, false);
+                //if(QRText.Text.Length > 60)
+                //pBox.Image = qrCode.GetGraphic((qrsize-(QRText.Text.Length - 60))==0?qrsize:qrsize--, Color.Black, Color.White, (Bitmap)Bitmap.FromFile(of.FileName),logosize+(QRText.Text.Length - 60), 5, false);
+                pBox.Image = qrCode.GetGraphic(qrsize, Color.Black, Color.White, (Bitmap)Bitmap.FromFile(of.FileName), logosize, 5, false);
 
         }
 
@@ -77,6 +80,54 @@ namespace QRCGenerator
         {
             QRText.Text = "...Your Text here...";
             QRText.ForeColor = Color.FromArgb(130, 130, 130);
+        }
+
+        private void SaveQR_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "PNG File (*.png)|*.png|" + "JPEG File (*.jpg)|*.jpg|" + "ICON File (*.ico)|*.ico|" + "GIF File (*.gif)|*.gif|" +
+                "All files (*.*)|*.*";
+            sfd.FileName = "QRGen.png";
+            string ext = "";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                ext = Path.GetExtension(sfd.FileName);
+                string newext = "";
+                for (int i = 0; i < ext.Length; i++)
+                {
+
+                    if (i == 1)
+                    {
+                        newext += char.ToUpper(ext[i]);
+                    }
+                    else
+                        newext += ext[i].ToString();
+                }
+
+                newext = newext.Remove(0, 1);
+                //MessageBox.Show(newext);
+
+                switch (ext.ToLower())
+                {
+                    case ".png":
+                        pBox.Image.Save(sfd.FileName, ImageFormat.Png);
+                        break;
+                    case ".jpg":
+                        pBox.Image.Save(sfd.FileName, ImageFormat.Jpeg);
+                        break;
+                    case ".ico":
+                        pBox.Image.Save(sfd.FileName, ImageFormat.Icon);
+                        break;
+                    case ".gif":
+                        pBox.Image.Save(sfd.FileName, ImageFormat.Gif);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(ext);
+                }
+                MessageBox.Show(string.Format("Saved the Generated QR as {0}", newext), "Saved",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                
+            }
         }
     }
 }
