@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>qr_ico.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -90,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="qr_ico.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
