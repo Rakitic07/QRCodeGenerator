@@ -3,7 +3,7 @@
 ![QRGif](https://github.com/Rakitic07/QRCodeGenerator/blob/master/QR.gif)
 
 
-# [![made-with-csharp](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/) [![dot-net-framework](https://img.shields.io/badge/.NET%20Framework-4.5-blue.svg?style=flat&logo=windows)](https://www.microsoft.com/en-in/download/details.aspx?id=30653)
+# [![made-with-csharp](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/) [![dot-net-framework](https://img.shields.io/badge/.NET%20Framework-v4.5-blue.svg?style=flat&logo=windows)](https://www.microsoft.com/en-in/download/details.aspx?id=30653)
 # [![runs-on-electricity](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://www.youtube.com/watch?v=oB1v-wh7EGU)
 
 # Running the Application
