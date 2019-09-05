@@ -3,11 +3,12 @@
 ![](https://github.com/Rakitic07/QRCodeGenerator/blob/master/QR.gif)
 
 
-# [![Made with C#](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+# [![made-with-csharp](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+# [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 # Running the Application
 
-+ `git clone https://github.com/Rakitic07/QRCodeGenerator.git`.
-+ `cd QRCodeGenerator/bin/Debug/`.
++ Clone the Repository `git clone https://github.com/Rakitic07/QRCodeGenerator.git`.
++ Change Directory `cd QRCodeGenerator/bin/Debug/`.
 + Run the `QRCGenerator.exe` file.
 
